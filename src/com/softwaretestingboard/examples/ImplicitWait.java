@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class ImplicitWait {
 
 	public static void main(String[] args) {
-		String exePath = "C:\\Users\\HEMANT\\Desktop\\Softwares\\selenium-java-3.4.0\\MicrosoftEdgeDriver\\MicrosoftWebDriver.exe";
+		String exePath = "drivers\\MicrosoftEdgeDriver\\MicrosoftWebDriver.exe";
 		System.out.println("launching Microsoft Edge browser");
 		System.setProperty("webdriver.edge.driver", exePath);
 

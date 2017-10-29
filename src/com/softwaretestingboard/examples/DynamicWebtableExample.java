@@ -12,7 +12,7 @@ public class DynamicWebtableExample {
 
 	public static void main(String[] args) {
 
-		String exePath = "C:\\Users\\HEMANT\\Desktop\\Softwares\\selenium-java-3.4.0\\chromedriver_win32\\chromedriver.exe";
+		String exePath = "drivers\\chromedriver_win32\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		String URL = "http://money.rediff.com/gainers/bsc/daily/groupa";

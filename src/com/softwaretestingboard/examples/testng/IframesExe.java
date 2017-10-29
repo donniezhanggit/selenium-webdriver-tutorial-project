@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
@@ -20,7 +21,8 @@ public class IframesExe {
 
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
-		driver = new FirefoxDriver(capabilities);
+		FirefoxOptions options = new FirefoxOptions(capabilities);
+		driver = new FirefoxDriver(options);
 		// launch Browser
 		driver.get(baseUrl);
 

@@ -9,7 +9,7 @@ public class IEDriverExample {
 
 	public static void main(String[] args) {
 
-		String exePath = "C:\\Users\\HEMANT\\Desktop\\Softwares\\iedriverserver\\IEDriverServer.exe";
+		String exePath = "drivers\\iedriverserver\\IEDriverServer.exe";
 		InternetExplorerDriverService.Builder serviceBuilder = new InternetExplorerDriverService.Builder();
 		serviceBuilder.usingPort(1080); // This specifies that sever should
 										// start at this port

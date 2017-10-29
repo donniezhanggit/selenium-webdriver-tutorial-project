@@ -1,12 +1,15 @@
 package com.softwaretestingboard.examples;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
@@ -19,7 +22,8 @@ public class FluentWaitExample {
 
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
-		WebDriver driver = new FirefoxDriver(capabilities);
+		FirefoxOptions options = new FirefoxOptions(capabilities);
+		WebDriver driver = new FirefoxDriver(options);
 
 		String baseUrl = "https://accounts.google.com/ServiceLogin?sacu=1&rip=1#identifier";
 		String expectedTitle = "Sign in - Google Accounts";
