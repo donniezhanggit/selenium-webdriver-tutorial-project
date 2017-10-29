@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -33,7 +34,8 @@ public class CrossBTestNG {
 
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 			capabilities.setCapability("marionette", false);
-			driver = new FirefoxDriver(capabilities);
+			FirefoxOptions options = new FirefoxOptions(capabilities);
+			driver = new FirefoxDriver(options);
 
 			// If browser is Chrome, then do this
 
@@ -41,7 +43,7 @@ public class CrossBTestNG {
 
 			// Here I am setting up the path for my IEDriver
 
-			String exePath = "C:\\Users\\HEMANT\\Desktop\\Softwares\\selenium-java-3.4.0\\chromedriver_win32\\chromedriver.exe";
+			String exePath = "drivers\\chromedriver_win32\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", exePath);
 			driver = new ChromeDriver();
 

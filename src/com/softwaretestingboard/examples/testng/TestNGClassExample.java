@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.*;
 
@@ -51,7 +52,8 @@ public class TestNGClassExample {
 		// add the desired compatilibities
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
-		driver = new FirefoxDriver(capabilities);
+		FirefoxOptions options = new FirefoxOptions(capabilities);
+		driver = new FirefoxDriver(options);
 
 		// declaration of variables
 		String baseUrl = "https://accounts.google.com/ServiceLogin?sacu=1&rip=1#identifier";

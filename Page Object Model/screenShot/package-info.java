@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author HEMANT
- *
- */
-package screenShot;
